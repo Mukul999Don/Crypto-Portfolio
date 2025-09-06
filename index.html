@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Portfolio - Track Your Bitcoin Holdings</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Crypto Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="prices.html">Prices</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item" id="auth-nav">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Main Content Column -->
+            <div class="col-lg-8">
+                <!-- Welcome Section -->
+                <div class="card mb-4 welcome-card">
+                    <div class="card-body p-4">
+                        <h1 class="card-title mb-3">Welcome to Crypto Portfolio</h1>
+                        <p class="card-text text-muted mb-4">
+                            Track your Bitcoin holdings, see live prices (USD & INR), save portfolios, and explore market data — 
+                            built with HTML, CSS, JavaScript, TypeScript, Bootstrap and PHP.
+                        </p>
+                        <div class="d-flex gap-3 flex-wrap">
+                            <a href="portfolio.html" class="btn btn-primary btn-lg px-4">Go to Portfolio</a>
+                            <a href="prices.html" class="btn btn-outline-secondary btn-lg px-4">View Prices</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bitcoin Snapshot -->
+                <div class="card bitcoin-card">
+                    <div class="card-body">
+                        <h2 class="card-title h4 mb-4">Latest Bitcoin Snapshot</h2>
+                        <div class="row text-center">
+                            <div class="col-md-6 mb-3">
+                                <div class="currency-label text-muted mb-2">USD</div>
+                                <div class="price-display" id="btc-usd">
+                                    <span class="currency-symbol">$</span>
+                                    <span class="price-value">Loading...</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="currency-label text-muted mb-2">INR</div>
+                                <div class="price-display" id="btc-inr">
+                                    <span class="currency-symbol">₹</span>
+                                    <span class="price-value">Loading...</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center mt-3">
+                            <small class="text-muted" id="loading-status">Fetching...</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <!-- Quick Tools -->
+                <div class="card mb-4">
+                    <div class="card-header bg-light">
+                        <h3 class="card-title h5 mb-0">Your Quick Tools</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-grid gap-2">
+                            <a href="portfolio.html" class="btn btn-success">Calculate Portfolio</a>
+                            <a href="login.html" class="btn btn-info" id="quick-auth">Login / Register</a>
+                            <a href="contact.html" class="btn btn-outline-primary">Contact Support</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About This Demo -->
+                <div class="card">
+                    <div class="card-header bg-light">
+                        <h3 class="card-title h5 mb-0">About This Demo</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text text-muted">
+                            This is a demo project that uses a PHP backend proxy to fetch prices from CoinGecko. 
+                            It stores demo users and saved portfolios in localStorage — not for production.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center py-4 mt-5">
+        <div class="container">
+            <p class="text-muted mb-0">Built with Bootstrap • Demo only — not for production</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/app.js"></script>
+</body>
+</html>
